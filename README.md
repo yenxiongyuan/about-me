@@ -3,7 +3,8 @@
 ## Author: Yen Xiong Yuan
 
 ## Lab02
-*Did basic setup for About Me Project
+
+* Did basic setup for About Me Project
 
 ## Lab03
 
