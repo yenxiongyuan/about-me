@@ -6,9 +6,12 @@ let userName = prompt('What is your name?');
 
 alert(`Welcome to my site ${userName}! Please answer yes or no to the following questions.`);
 
+let correctAnswer = 0;
+
 let questionOne = prompt('Do I live in Philadelphia?').toLowerCase();
 if(questionOne === 'yes' || questionOne === 'y') {
   alert('Correct');
+  correctAnswer ++;
 // console.log('Correct')
 } else if (questionOne === 'no' || questionOne === 'n'){
   alert('Incorrect, I live in the Philadelphia.');
@@ -18,6 +21,7 @@ if(questionOne === 'yes' || questionOne === 'y') {
 let questionTwo = prompt('Did I borned in China?').toLowerCase();
 if(questionTwo === 'yes' || questionTwo === 'y') {
   alert('Correct');
+  correctAnswer ++;
 // console.log('Correct')
 } else if (questionTwo === 'no' || questionTwo === 'n'){
   alert('Incorrect, I borned in China.');
@@ -30,12 +34,14 @@ if(questionThree === 'yes' || questionThree === 'y') {
 // console.log('Incorrect, I joined the US Navy.')
 } else if (questionThree === 'no' || questionThree === 'n'){
   alert('Correct');
+  correctAnswer ++;
 // console.log('Correct')
 }
 
 let questionFour = prompt('Do I like to play Poker?').toLowerCase();
 if(questionFour === 'yes' || questionFour === 'y') {
   alert('Correct');
+  correctAnswer ++;
 // console.log('Correct')
 } else if (questionFour === 'no' || questionFour === 'n'){
   alert('Incorrect, I like to play Poker.');
@@ -45,13 +51,12 @@ if(questionFour === 'yes' || questionFour === 'y') {
 let questionFive = prompt('Am I a real estate agent?').toLowerCase();
 if(questionFive === 'yes' || questionFive === 'y') {
   alert('Correct');
+  correctAnswer ++;
 // console.log('Correct')
 } else if (questionFive === 'no' || questionFive === 'n'){
   alert('Incorrect, I am a real estate agent.');
 // console.log('Incorrect, I am a real estate agent.')
 }
-
-alert(`Thanks for playing, ${userName}. Thanks for coming to my site!`);
 
 let myNum = 8;
 let guessRemain = 4;
@@ -63,6 +68,7 @@ while (guessRemain > 0) {
     alert('Your number is too Low');
   } else {
     alert('You got the correct number');
+    correctAnswer ++;
     break;
   }
 
@@ -82,6 +88,7 @@ while(guesses > 0) {
   for (let i = 0; i < countries.length; i++) {
     if (countries[i] === guess) {
       alert('You got the right answer.');
+      correctAnswer ++;
       isCorrect = true;
     }
   }
@@ -92,3 +99,7 @@ while(guesses > 0) {
 }
 
 alert('The correct answers are Japan, Korea, England, France, Thailand, Canada, Brazil, Egypt, Germany, Indonesia.');
+
+alert(`You got ${correctAnswer} correct out of 7.`);
+
+alert(`Thanks for playing, ${userName}. Thanks for coming to my site!`);
