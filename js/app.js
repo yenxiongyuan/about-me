@@ -6,6 +6,7 @@ let userName = prompt('What is your name?');
 
 alert(`Welcome to my site ${userName}! Please answer yes or no to the following questions.`);
 
+
 let correctAnswer = 0;
 function philadelphia () {
   let questionOne = prompt('Do I live in Philadelphia?').toLowerCase();
@@ -76,6 +77,7 @@ function guessNumber () {
   let myNum = 8;
   let guessRemain = 4;
   let userGuess = +prompt('Guess what number I am thinking of: Pick a number between 1 to 10');
+
   while (guessRemain > 0) {
     if (userGuess > myNum) {
       alert('Your number is too High');
@@ -83,7 +85,9 @@ function guessNumber () {
       alert('Your number is too Low');
     } else {
       alert('You got the correct number');
+
       correctAnswer ++;
+
       break;
     }
 
@@ -95,6 +99,7 @@ function guessNumber () {
     }
   }
 }
+
 guessNumber ();
 
 function guessCountry () {
@@ -106,7 +111,9 @@ function guessCountry () {
     for (let i = 0; i < countries.length; i++) {
       if (countries[i] === guess) {
         alert('You got the right answer.');
+
         correctAnswer ++;
+
         isCorrect = true;
       }
     }
@@ -116,6 +123,7 @@ function guessCountry () {
     guesses --;
   }
 }
+
 guessCountry ();
 
 alert('The correct answers are Japan, Korea, England, France, Thailand, Canada, Brazil, Egypt, Germany, Indonesia.');
@@ -123,3 +131,4 @@ alert('The correct answers are Japan, Korea, England, France, Thailand, Canada, 
 alert(`You got ${correctAnswer} correct out of 7.`);
 
 alert(`Thanks for playing, ${userName}. Thanks for coming to my site!`);
+
